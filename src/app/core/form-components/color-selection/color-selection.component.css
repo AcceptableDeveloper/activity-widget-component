@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: end;
+}
+
+.styled-checkbox {
+    display: none; /* Hide the default radio button */
+  }
+  
+  .checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px; /* Space for the custom checkbox */
+    cursor: pointer;
+  }
+  
+  .checkbox-label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+  
+  .styled-checkbox:checked + .checkbox-label::before {
+    background-color: #3B755F;
+    border-color: #3B755F;
+  }
+  
+  .styled-checkbox:checked + .checkbox-label::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    left: 4px;
+    top: 3px;
+    transform: rotate(45deg);
+  }
+  

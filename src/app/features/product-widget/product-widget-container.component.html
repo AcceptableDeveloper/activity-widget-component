@@ -1,3 +1,9 @@
-<div class="product-widget-container">
-    <product-widget *ngFor="let product of productData" [product]="product"></product-widget>
+<div class="container">
+  <div class="card">
+    <h2 class="title">Per product widgets</h2>
+    <hr>
+    <div class="product-widget-container">
+      <product-widget *ngFor="let product of productData" [product]="product" class="product-widget"></product-widget>
+    </div>  
+  </div>
 </div>

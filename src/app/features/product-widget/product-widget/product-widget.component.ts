@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../shared/models/product.model';
+import { ProductType } from '../shared/enums/product-type.enum';
 
 @Component({
   selector: 'product-widget',
@@ -8,4 +9,6 @@ import { Product } from '../shared/models/product.model';
 })
 export class ProductWidgetComponent {
   @Input() product?: Product;
+
+  public productType = ProductType;
  }

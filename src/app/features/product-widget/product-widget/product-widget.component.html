@@ -1,1 +1,16 @@
-<span>{{product | json}}</span>
+<div class="example-widget" [ngStyle]="{'background-color' : product?.selectedColor}">
+    <figure>
+        <img src="/assets/images/Subtract.svg">
+        <figcaption>Greenspark</figcaption>
+    </figure>
+    <div class="text-container">
+        <p>This product {{product?.action}}</p>
+        <p>{{product?.type !== productType.Carbon ? product?.amount : product?.amount + 'kgs of'}} {{product?.type}}</p>
+    </div>
+</div>
+
+<div class="widget-config-options">
+    <profile-link></profile-link>
+    <color-selection [selectedColor]="product?.selectedColor"></color-selection>
+    <activate-badge></activate-badge>
+</div>

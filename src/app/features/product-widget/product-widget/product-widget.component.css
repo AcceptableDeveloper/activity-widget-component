@@ -1,0 +1,29 @@
+.example-widget {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    width: calc(100% / 3);
+}
+
+figcaption {
+    font-size: 10px;
+    color: white;
+}
+
+.widget-config-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}

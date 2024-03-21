@@ -1,0 +1,9 @@
+<div class="container">
+    <label>Badge color</label>
+    <div class="checkbox-container" >
+        <label *ngFor="let color of colors">
+            <input type="checkbox" [value]="color" [(ngModel)]="selectedColor" (change)="updateSelectedColor(color)">
+          </label>
+    </div>
+</div>
+  
