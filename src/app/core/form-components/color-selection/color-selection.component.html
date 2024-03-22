@@ -2,7 +2,7 @@
     <label>Badge color</label>
     <div class="checkbox-container" >
         <label *ngFor="let color of colors">
-            <input type="checkbox" [value]="color" [(ngModel)]="selectedColor" (change)="updateSelectedColor(color)">
+            <input type="checkbox" [value]="color" [checked]="selectedColor === color" [ngStyle]="{'accent-color': color}" (change)="updateSelectedColor(color)">
           </label>
     </div>
 </div>

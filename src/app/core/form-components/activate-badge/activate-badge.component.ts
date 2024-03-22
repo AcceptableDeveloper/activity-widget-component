@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './activate-badge.component.html',
   styleUrl: './activate-badge.component.css',
 })
-export class ActivateBadgeComponent { }
+export class ActivateBadgeComponent { 
+}

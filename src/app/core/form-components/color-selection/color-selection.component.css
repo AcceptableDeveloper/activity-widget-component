@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+input {
+  margin: 2px;
+}
+
 .checkbox-container {
   display: flex;
   justify-content: end;
@@ -23,8 +27,8 @@
   .checkbox-label::before {
     content: "";
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #ccc;
     border-radius: 3px;
     position: absolute;
