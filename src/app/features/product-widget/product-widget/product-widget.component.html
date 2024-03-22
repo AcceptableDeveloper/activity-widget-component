@@ -1,4 +1,4 @@
-<div class="example-widget" [ngStyle]="{'background-color' : product?.selectedColor}">
+<div class="example-widget" [ngStyle]="{'background-color' : getColorHex(product?.selectedColor)}">
     <figure>
         <img src="/assets/images/Subtract.svg">
         <figcaption>Greenspark</figcaption>
@@ -23,7 +23,7 @@
         <label>Badge color</label>
         <div class="checkbox-container" >
             <label *ngFor="let color of colors">
-                <input type="checkbox" [value]="color" [checked]="product?.selectedColor === color" [ngStyle]="{'accent-color': color, 'fill': color}" (change)="updateSelectedColor(color)">
+                <input type="checkbox" [value]="color" [checked]="product?.selectedColor === color" [ngStyle]="{'accent-color': getColorHex(color), 'fill': getColorHex(color)}" (change)="updateSelectedColor(color)">
             </label>
         </div>
     </div>

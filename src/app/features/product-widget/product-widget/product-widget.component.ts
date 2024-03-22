@@ -19,4 +19,19 @@ export class ProductWidgetComponent {
     this.selectedColor = color;
     this.product!.selectedColor = color;
   }
+
+    // Define getColorHex function
+  public getColorHex(color?: ProductColor): string {
+    if (!color) {
+      return ProductColor.Green;
+    }
+      const colorHexMap: Record<ProductColor, string> = {
+        [ProductColor.Blue]: '#2E3A8C',
+        [ProductColor.Green]: '#3B755F',
+        [ProductColor.Beige]: '#F2EBDB',
+        [ProductColor.White]: '#FFFFFF',
+        [ProductColor.Black]: '#212121'
+      };
+      return colorHexMap[color];
+    }
  }
