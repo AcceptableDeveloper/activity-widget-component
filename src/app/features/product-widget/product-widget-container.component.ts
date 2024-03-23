@@ -1,7 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ProductWidgetService } from './shared/services/product-widget.service';
 import { Product } from './shared/models/product.model';
-import { ProductWidgetComponent } from './product-widget/product-widget.component';
 
 @Component({
   selector: 'product-widget-container',

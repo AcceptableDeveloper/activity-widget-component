@@ -11,7 +11,7 @@ import { ProductColor } from '../shared/enums/product-color.enum';
 export class ProductWidgetComponent {
   @Input() product?: Product;
   public colors = Object.values(ProductColor);
-  selectedColor?: ProductColor = this.product?.selectedColor;
+  public selectedColor?: ProductColor = this.product?.selectedColor;
 
   public productType = ProductType;
 
@@ -20,7 +20,6 @@ export class ProductWidgetComponent {
     this.product!.selectedColor = color;
   }
 
-    // Define getColorHex function
   public getColorHex(color?: ProductColor): string {
     if (!color) {
       return ProductColor.Green;
