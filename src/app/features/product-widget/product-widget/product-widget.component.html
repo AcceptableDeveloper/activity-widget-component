@@ -1,0 +1,39 @@
+<div class="example-widget" [ngStyle]="{'background-color' : getColorHex(product?.selectedColor)}">
+    <figure>
+        <img src="/assets/images/Subtract.svg">
+        <figcaption>Greenspark</figcaption>
+    </figure>
+    <div class="text-container">
+        <p>This product {{product?.action}}</p>
+        <p>{{product?.type !== productType.Carbon ? product?.amount : product?.amount + 'kgs of'}} {{product?.type}}</p>
+    </div>
+</div>
+
+<div class="widget-config-options">
+    <!-- Implement child components using a form group for individual options -->
+    <!-- <profile-link class="widget-option"></profile-link>
+    <color-selection class="widget-option" [selectedColor]="product?.selectedColor"></color-selection>
+    <activate-badge class="widget-option"></activate-badge> -->
+
+    <div class="container profile-link">
+        <label for="profile-link">Link to public profile</label>
+        <input type="checkbox" class="profile-checkbox" [checked]="product?.linked">
+    </div>        
+    
+    <div class="container">
+        <label>Badge color</label>
+        <div class="checkbox-container" >
+            <label *ngFor="let color of colors">
+                <input type="checkbox" [value]="color" [checked]="product?.selectedColor === color" [ngStyle]="{'accent-color': getColorHex(color), 'fill': getColorHex(color)}" (change)="updateSelectedColor(color)">
+            </label>
+        </div>
+    </div>
+      
+    <div class="container">
+        <label for="activate">Activate badge</label>
+        <label class="switch">
+            <input id="activate" type="checkbox" [checked]="product?.active">
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
