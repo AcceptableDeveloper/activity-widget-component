@@ -1,5 +1,3 @@
-# Greenspark
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
 Project has been deployed on Netlify at https://greenspark-application-task.netlify.app/ 
